@@ -30,7 +30,7 @@ public class ExpensesTracker{
 
 
             outToFile.println(name + " purchased " + purchase + " for " + payment + " US Dollars ");
-            outToFile.close();
+           
 
             System.out.println("Would you like to log another purchase? (y/n)");
             scan.nextLine();
@@ -43,6 +43,7 @@ public class ExpensesTracker{
         System.out.println("Would you like to read a summary of your purchases?");
         String x = scan.nextLine();
         scan.close();
+         outToFile.close();
                         if (x.equals("y")) {
                             Scanner fileScan = new Scanner(new File("expenses.txt"));
                             String url;
